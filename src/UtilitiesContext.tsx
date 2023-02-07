@@ -3,9 +3,7 @@ import React, { createContext, useContext } from 'react'
 
 interface IUtilitiesContext {
   helmet: {
-    open: Function
-    close: Function
-    toggle: Function
+    hide: Function
   }
 }
 
@@ -13,9 +11,7 @@ const F = () => {}
 
 const utilitiesContextDefaults: IUtilitiesContext = {
   helmet: {
-    open: F,
-    close: F,
-    toggle: F,
+    hide: Function,
   },
 }
 
@@ -31,9 +27,7 @@ export interface IUtilitiesProviderProps {
 
 const UtilitiesProvider: React.FC<IUtilitiesProviderProps> = ({ children }) => {
   const helmet = {
-    open: () => pub('__TONE_EVENTS__', 'helmet.state', 'open'),
-    close: () => pub('__TONE_EVENTS__', 'helmet.state', 'close'),
-    toggle: () => pub('__TONE_EVENTS__', 'helmet.state', 'toggle'),
+    hide: (hidden: boolean) => pub('__TONE_EVENTS__', 'helmet.state', hidden),
   }
 
   return (

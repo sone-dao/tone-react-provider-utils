@@ -7,6 +7,9 @@
     "build": "rollup -c",
     "dev": "node ./dev.js"
   },
+  "dependencies": {
+    "@sone-dao/sone-react-utils": "^1.0.0"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
@@ -37,8 +40,5 @@
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "@sone-dao/sone-react-utils": "^1.0.0"
-  }
+  "types": "dist/index.d.ts"
 }
