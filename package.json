@@ -1,15 +1,11 @@
 {
-  "name": "@sone-dao/sone-template-react",
-  "version": "1.0.0",
-  "repository": "https://github.com/sone-dao/sone-template-react.git",
+  "name": "@sone-dao/tone-react-provider-utils",
+  "version": "0.1.0",
+  "repository": "https://github.com/sone-dao/tone-react-provider-utils.git",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
     "dev": "node ./dev.js"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
@@ -21,6 +17,8 @@
     "@types/react-dom": "^18.0.10",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.12.1",
     "rollup-plugin-dts": "^5.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -30,10 +28,17 @@
     "tslib": "^2.5.0",
     "typescript": "^4.9.5"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "files": [
     "dist"
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@sone-dao/sone-react-utils": "^1.0.0"
+  }
 }
